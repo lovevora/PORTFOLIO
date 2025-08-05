@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project 1 – Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      flex-direction: column;
+    }
+
+    .gallery-img {
+      max-width: 90vw;
+      max-height: 80vh;
+      margin-bottom: 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      background: red;
+      border: none;
+      color: black;
+      font-family: 'Xanh Mono', monospace;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="galleryImage" class="gallery-img" src="images/gallery/pic1.jpg" alt="Gallery Image">
+
+    <div class="buttons">
+      <button class="btn" onclick="goHome()">Home</button>
+      <button class="btn" onclick="nextImage()">Next</button>
+    </div>
+  </div>
+
+  <script src="gallery.js"></script>
+<script>
+  let current = 0;
+
+  function nextImage() {
+    current = (current + 1) % images.length;
+    document.getElementById('galleryImage').src = 'images/gallery/' + images[current];
+  }
+
+  function goHome() {
+    window.location.href = 'index.html';
+  }
+</script>
+
+
+    let current = 0;
+
+    function nextImage() {
+      current = (current + 1) % images.length;
+      const img = document.getElementById('galleryImage');
+      img.src = 'images/gallery/' + images[current];
+    }
+
+    function goHome() {
+      window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>
