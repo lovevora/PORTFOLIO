@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Interactive Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0;
+    background: white;
+    color: black;
+    font-family: 'VT323', monospace;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .dropdown {
+    margin: 20px auto 0;
+    position: relative;
+    width: 200px;
+    font-size: 24px;
+  }
+  .dropdown select {
+    width: 100%;
+    background: #111;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-family: 'VT323', monospace;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 8px;
+  }
+  #content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  section {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  section.active {
+    display: block;
+  }
+  canvas {
+    border: 1px solid black;
+    display: block;
+    margin: auto;
+  }
+  button.back-home {
+    margin-top: 20px;
+    font-family: 'VT323', monospace;
+    font-size: 20px;
+    padding: 8px 16px;
+    background: #111;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  button.back-home:hover {
+    background: #333;
+  }
+</style>
+</head>
+<body>
+  <div class="dropdown">
+    <select id="page-select" aria-label="Select page">
+      <option value="home">Home</option>
+      <option value="gallery">Gallery</option>
+      <option value="about">About</option>
+    </select>
+  </div>
+  <div id="content">
+    <section id="home" class="active">
+      <canvas id="cube" width="400" height="400"></canvas>
+    </section>
+    <section id="gallery">
+      <h1>Gallery</h1>
+      <p>Here’s where your images, gifs, or 3D models will go.</p>
+      <p>For now, imagine some cool art pieces here.</p>
+      <button class="back-home">Back to Home</button>
+    </section>
+    <section id="about">
+      <h1>About Me</h1>
+      <p>This is your art portfolio and dev page.</p>
+      <p>Write whatever you want here about your skills and style.</p>
+      <button class="back-home">Back to Home</button>
+    </section>
+  </div>
+
+  <script>
+    const pageSelect = document.getElementById('page-select');
+    const sections = document.querySelectorAll('section');
+    const backButtons = document.querySelectorAll('button.back-home');
+
+    function showPage(pageId) {
+      sections.forEach(sec => {
+        sec.classList.toggle('active', sec.id === pageId);
+      });
+      pageSelect.value = pageId;
+    }
+
+    pageSelect.addEventListener('change', () => {
+      showPage(pageSelect.value);
+    });
+
+    backButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        showPage('home');
+      });
+    });
+
+    // CUBE ANIMATION CODE (same as before)
+    const canvas = document.getElementById('cube');
+    const ctx = canvas.getContext('2d');
+    let angle = 0;
+    const cubeSize = 150;
+
+    function drawCube(angle) {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.save();
+      ctx.translate(canvas.width / 2, canvas.height / 2);
+
+      const cosA = Math.cos(angle);
+      const sinA = Math.sin(angle);
+
+      const points = [
+        [-1, -1, -1], [1, -1, -1],
+        [1, 1, -1], [-1, 1, -1],
+        [-1, -1, 1], [1, -1, 1],
+        [1, 1, 1], [-1, 1, 1],
+      ];
+
+      const projected = points.map(([x,y,z]) => {
+        let x1 = x * cosA - z * sinA;
+        let z1 = x * sinA + z * cosA;
+        let y1 = y * cosA - z1 * sinA;
+        const distance = 3;
+        const z2 = z1 + distance;
+        const scale = 200 / z2;
+        return [x1 * scale, y1 * scale];
+      });
+
+      const edges = [
+        [0,1],[1,2],[2,3],[3,0],
+        [4,5],[5,6],[6,7],[7,4],
+        [0,4],[1,5],[2,6],[3,7],
+      ];
+
+      ctx.strokeStyle = 'red';
+      ctx.lineWidth = 3;
+      for(const [a,b] of edges) {
+        ctx.beginPath();
+        ctx.moveTo(projected[a][0], projected[a][1]);
+        ctx.lineTo(projected[b][0], projected[b][1]);
+        ctx.stroke();
+      }
+      ctx.restore();
+    }
+
+    function animate() {
+      angle += 0.02;
+      if(document.getElementById('home').classList.contains('active')) {
+        drawCube(angle);
+      }
+      requestAnimationFrame(animate);
+    }
+
+    animate();
+  </script>
+</body>
+</html>
