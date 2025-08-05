@@ -8,7 +8,7 @@ body {
   background-repeat: repeat;
   background-size: 200px 200px; /* smaller tiles to tile more */
   font-family: 'Xanh Mono', monospace;
-  color: red;
+  color: rgb(148, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ body {
 }
 
 .enter-link {
-  color: red;
+  color: rgb(148, 0, 0);
   text-decoration: none;
   font-size: 2rem;
   letter-spacing: 0.1em;
