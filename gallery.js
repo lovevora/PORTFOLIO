@@ -1,8 +1,9 @@
+// Auto-generated gallery image list
 const images = [
-  'cm_06.PNG',
-  'dafgsetrysytry.PNG',
   'headdy.PNG',
+  'dafgsetrysytry.PNG',
   'pixel05.PNG',
-  'pixel06.PNG',
   'pixel11.PNG',
+  'pixel06.PNG',
+  'cm_06.PNG',
 ];
