@@ -17,6 +17,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
     }
 
     .container {
@@ -32,31 +35,28 @@
 
     .buttons {
       display: flex;
-      gap: 1rem;
+      gap: 2rem;
       justify-content: center;
     }
 
-    .btn {
-  color: red;
-  background: transparent;
-  border: none;
-  font-family: 'Xanh Mono', monospace;
-  font-size: 2rem;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  user-select: none;
-  text-decoration: none;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  padding: 0; /* remove default button padding */
-  margin: 0 1rem;
-}
+    .enter-link {
+      background: none;
+      border: none;
+      font-family: 'Xanh Mono', monospace;
+      font-size: 2rem;
+      letter-spacing: 0.1em;
+      color: red;
+      text-decoration: none;
+      cursor: pointer;
+      user-select: none;
+    }
 
-.btn:hover {
-  color: #ff4c4c;
-  text-shadow: 0 0 8px #ff4c4c, 0 0 20px #ff0000;
-  transform: none; /* no scale effect */
-}
-
+    .enter-link:hover {
+      animation: rgbFlicker 0.1s infinite, shake 0.3s infinite;
+      color: inherit;
+      filter: none;
+      text-shadow: none;
+    }
   </style>
 </head>
 <body>
@@ -64,8 +64,8 @@
     <img id="galleryImage" class="gallery-img" alt="Gallery Image">
 
     <div class="buttons">
-      <button class="btn" onclick="goHome()">Home</button>
-      <button class="btn" onclick="nextImage()">Next</button>
+      <button class="enter-link" onclick="goHome()">Home</button>
+      <button class="enter-link" onclick="nextImage()">Next</button>
     </div>
   </div>
 
@@ -73,7 +73,6 @@
   <script>
     let current = 0;
 
-    // Load the first image automatically
     window.onload = () => {
       if (images.length > 0) {
         document.getElementById('galleryImage').src = 'images/gallery/' + images[current];
