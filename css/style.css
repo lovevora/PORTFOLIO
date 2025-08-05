@@ -51,12 +51,13 @@ body {
   20%, 40%, 60%, 80% { transform: translateX(2px); }
 }
 
-.enter-link:hover {
+.enter-link:hover,
+button.enter-link:hover {
   animation: rgbFlicker 0.1s infinite, shake 0.3s infinite;
   cursor: pointer;
   user-select: none;
-  /* remove static color to let animation handle it */
   color: inherit;
-  filter: none; /* reset default on hover */
+  filter: none;
   text-shadow: none;
 }
+
