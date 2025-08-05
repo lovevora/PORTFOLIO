@@ -1,0 +1,27 @@
+body {
+  background: black;
+  color: red;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  padding: 2rem;
+}
+
+header {
+  border-bottom: 1px solid red;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+nav a {
+  color: red;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  font-size: 1.2rem;
+}
