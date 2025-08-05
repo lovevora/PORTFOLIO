@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Project 1 – Gallery</title>
-  <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       flex-direction: column;
+      background-color: #050505;
+      background-image: url('images/border_px.PNG');
+      background-repeat: repeat;
+      background-size: 40px 40px;
+      font-family: 'Xanh Mono', monospace;
+      color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
     }
 
     .gallery-img {
@@ -15,28 +28,44 @@
       max-height: 80vh;
       margin-bottom: 1rem;
       border: none;
-      user-select: none;
     }
 
     .buttons {
       display: flex;
-      gap: 2rem;
+      gap: 1rem;
       justify-content: center;
     }
 
-    /* Optional: spacing fix for mobile or smaller viewports */
-    .enter-link {
-      margin: 0 1rem;
-    }
+    .btn {
+  color: red;
+  background: transparent;
+  border: none;
+  font-family: 'Xanh Mono', monospace;
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  padding: 0; /* remove default button padding */
+  margin: 0 1rem;
+}
+
+.btn:hover {
+  color: #ff4c4c;
+  text-shadow: 0 0 8px #ff4c4c, 0 0 20px #ff0000;
+  transform: none; /* no scale effect */
+}
+
   </style>
 </head>
 <body>
   <div class="container">
-    <img id="galleryImage" class="gallery-img" alt="Gallery Image" />
+    <img id="galleryImage" class="gallery-img" alt="Gallery Image">
 
     <div class="buttons">
-      <a class="enter-link" onclick="goHome()">Home</a>
-      <a class="enter-link" onclick="nextImage()">Next</a>
+      <button class="btn" onclick="goHome()">Home</button>
+      <button class="btn" onclick="nextImage()">Next</button>
     </div>
   </div>
 
@@ -46,7 +75,7 @@
 
     // Load the first image automatically
     window.onload = () => {
-      if (typeof images !== 'undefined' && images.length > 0) {
+      if (images.length > 0) {
         document.getElementById('galleryImage').src = 'images/gallery/' + images[current];
       } else {
         document.getElementById('galleryImage').alt = 'No images found';
