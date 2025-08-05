@@ -39,6 +39,7 @@
       gap: 2rem;
     }
 
+    /* Button styles copied exactly from .enter-link */
     .btn {
       color: red;
       background: transparent;
@@ -49,15 +50,19 @@
       cursor: pointer;
       user-select: none;
       text-decoration: none;
-      transition: color 0.3s ease, text-shadow 0.3s ease;
       padding: 0;
       margin: 0 1rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+      text-shadow: 0 0 4px #ff0000;
     }
 
     .btn:hover {
       color: #ff4c4c;
-      text-shadow: 0 0 8px #ff4c4c, 0 0 20px #ff0000;
-      transform: none;
+      text-shadow:
+        0 0 6px #ff4c4c,
+        0 0 20px #ff0000,
+        0 0 30px #ff0000;
+      transform: none; /* no scale effect */
     }
   </style>
 </head>
