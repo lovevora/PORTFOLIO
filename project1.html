@@ -3,21 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title>Project 1 – Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     body {
       flex-direction: column;
+      background-color: #050505;
+      background-image: url('images/border_px.PNG');
+      background-repeat: repeat;
+      background-size: 20px 20px;
+      font-family: 'Xanh Mono', monospace;
+      color: red;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      text-align: center;
     }
 
     .gallery-img {
       max-width: 90vw;
       max-height: 80vh;
       margin-bottom: 1rem;
+      border: 2px solid red;
     }
 
     .buttons {
       display: flex;
       gap: 1rem;
+      justify-content: center;
     }
 
     .btn {
@@ -38,7 +54,7 @@
 </head>
 <body>
   <div class="container">
-    <img id="galleryImage" class="gallery-img" src="images/gallery/pic1.jpg" alt="Gallery Image">
+    <img id="galleryImage" class="gallery-img" alt="Gallery Image">
 
     <div class="buttons">
       <button class="btn" onclick="goHome()">Home</button>
@@ -47,26 +63,21 @@
   </div>
 
   <script src="gallery.js"></script>
-<script>
-  let current = 0;
-
-  function nextImage() {
-    current = (current + 1) % images.length;
-    document.getElementById('galleryImage').src = 'images/gallery/' + images[current];
-  }
-
-  function goHome() {
-    window.location.href = 'index.html';
-  }
-</script>
-
-
+  <script>
     let current = 0;
+
+    // Load the first image automatically
+    window.onload = () => {
+      if (images.length > 0) {
+        document.getElementById('galleryImage').src = 'images/gallery/' + images[current];
+      } else {
+        document.getElementById('galleryImage').alt = 'No images found';
+      }
+    };
 
     function nextImage() {
       current = (current + 1) % images.length;
-      const img = document.getElementById('galleryImage');
-      img.src = 'images/gallery/' + images[current];
+      document.getElementById('galleryImage').src = 'images/gallery/' + images[current];
     }
 
     function goHome() {
