@@ -1,18 +1,41 @@
+/* General reset & font */
 body {
   margin: 0;
-  padding: 2rem;
-  background-color: black;
-  color: red;
-  font-family: 'Courier New', monospace;
-
-  /* background image */
+  padding: 0;
+  height: 100vh;
+  background-color: #050505;
   background-image: url('../images/border_px.PNG');
   background-repeat: repeat;
-  background-size: auto;
+  background-size: 20px 20px; /* smaller tiles to tile more */
+  font-family: 'Xanh Mono', monospace;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  font-weight: normal;
+.container {
+  text-align: center;
+}
+
+.pixel-art {
+  max-width: 300px;
+  width: 100%;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+}
+
+.enter-link {
+  color: red;
+  text-decoration: none;
   font-size: 2rem;
-  margin: 0;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  user-select: none;
+}
+
+.enter-link:hover {
+  color: #ff4c4c;
+  text-shadow: 0 0 8px #ff4c4c, 0 0 20px #ff0000;
 }
