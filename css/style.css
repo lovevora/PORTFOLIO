@@ -1,14 +1,12 @@
-/* General reset & font */
+/* Base styling */
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: #050505;
-  background-image: url('../images/border_px.PNG');
-  background-repeat: repeat;
-  background-size: 200px 200px; /* smaller tiles to tile more */
+  background-color: #0a0a0a; /* very dark gray, almost black */
   font-family: 'Xanh Mono', monospace;
-  color: rgb(148, 0, 0);
+  font-size: 1.5rem; /* ~24px */
+  color: #f5f5f5; /* subtle off-white, not pure white */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,47 +15,3 @@ body {
 .container {
   text-align: center;
 }
-
-.pixel-art {
-  max-width: 600px;
-  width: 200%;
-  display: block;
-  margin: 0 auto 1.5rem auto;
-}
-
-.enter-link {
-  color: rgb(148, 0, 0);
-  text-decoration: none;
-  font-size: 2rem;
-  letter-spacing: 0.1em;
-  cursor: pointer;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-  user-select: none;
-}
-
-/* Keyframes for RGB flicker */
-@keyframes rgbFlicker {
-  0%   { filter: drop-shadow(0 0 2px red); color: #ff0000; }
-  25%  { filter: drop-shadow(0 0 2px cyan); color: #00ffff; }
-  50%  { filter: drop-shadow(0 0 2px magenta); color: #ff00ff; }
-  75%  { filter: drop-shadow(0 0 2px yellow); color: #ffff00; }
-  100% { filter: drop-shadow(0 0 2px red); color: #ff0000; }
-}
-
-/* Keyframes for subtle horizontal shake */
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
-  20%, 40%, 60%, 80% { transform: translateX(2px); }
-}
-
-.enter-link:hover,
-button.enter-link:hover {
-  animation: rgbFlicker 0.1s infinite, shake 0.3s infinite;
-  cursor: pointer;
-  user-select: none;
-  color: inherit;
-  filter: none;
-  text-shadow: none;
-}
-
