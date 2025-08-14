@@ -1,4 +1,7 @@
 /* Base styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital,wght@0,400;1,400&display=swap');
+
 body {
   margin: 0;
   padding: 0;
@@ -17,7 +20,15 @@ body {
   padding: 2rem 1rem;
 }
 
-/* Banner */
+.banner {
+  width: 100vw; /* full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 .banner img {
   width: 100%;
   height: auto;
@@ -59,4 +70,8 @@ body {
 
 .main-nav a:hover {
   color: #aaa; /* hover gray */
+}
+body {
+  font-size: 1.8rem; /* bigger */
+  line-height: 1.2; /* tighter line spacing for that cramped early web feel */
 }
