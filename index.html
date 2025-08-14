@@ -53,42 +53,9 @@
   </div>
 </div>
 
-<script>
-// Smooth parallax effect with lerp
-let currentScrollY = 0;
-let targetScrollY = 0;
 
-// Update target scroll position
-window.addEventListener('scroll', () => {
-  targetScrollY = window.pageYOffset;
-});
 
-// Smooth animation loop
-function smoothParallax() {
-  const parallaxLeft = document.getElementById('parallax-left');
-  const parallaxRight = document.getElementById('parallax-right');
-  
-  if (parallaxLeft && parallaxRight) {
-    // Set height to be taller than document for long pages
-    const docHeight = document.body.scrollHeight;
-    parallaxLeft.style.height = `${docHeight + 1000}px`;
-    parallaxRight.style.height = `${docHeight + 1000}px`;
-    
-    // Lerp (linear interpolation) for smooth movement
-    currentScrollY += (targetScrollY - currentScrollY) * 0.015; // 0.1 is the smoothing factor
-    
-    const speed = -0.2;
-    const parallaxOffset = currentScrollY * speed;
-    
-    parallaxLeft.style.transform = `translateY(${parallaxOffset}px)`;
-    parallaxRight.style.transform = `translateY(${parallaxOffset}px)`;
-  }
-  
-  requestAnimationFrame(smoothParallax);
-}
 
-// Start the smooth animation
-smoothParallax();
 </script>
 
 <script src="gallery.js"></script>
