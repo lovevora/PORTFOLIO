@@ -1,33 +1,33 @@
 const images = [
-  'images/gallery/cm_06.PNG',
-  'images/gallery/dafgsetrysytry.PNG',
-  'images/gallery/headdy.PNG',
-  'images/gallery/pixel05.PNG',
-  'images/gallery/pixel06.PNG',
-  'images/gallery/pixel11.PNG',
+  'images/gallery/FETUSSSSSSS66666SJHJHJS40994898989089064.png',
+  'images/gallery/FETUSSSSSSS66666SJHJHJS409948989890890648790998776787.png',
+  
+  'images/gallery/CRINGE_02.png',
+  'images/gallery/fucky_coloros_SAVU0.png',
+  'images/gallery/gdsfsgdfsgdfsgdfgfgdfdsfdggg.png',
+  'images/gallery/gdsfsgdfsgdfsgdfgfgdggg.png',
+  'images/gallery/gdsfsgdfsgdfsgdfggg.png',
+  'images/gallery/gfsdsfgdsgdfgsdfsdgfsdafdssdfsdffsdfdgf.png',
+  'images/gallery/idek_676765756765756765.png',
+  'images/gallery/leijaNOCOMP.png',
+  'images/gallery/marie_666.png',
+  'images/gallery/sdg9uidsf9g8sdfudgf.png',
+  'images/gallery/dsfadfasffffffffffffffffffasdf.png',
 ];
 
 function loadGallery() {
     const container = document.querySelector('.gallery-container');
     if (!container) return;
     
-    for (let i = 0; i < images.length; i += 2) {
+    // Create one row per image (not 2 images per row)
+    for (let i = 0; i < images.length; i++) {
         const row = document.createElement('div');
         row.className = 'gallery-row';
         
-        // First image
-        const img1 = document.createElement('img');
-        img1.src = images[i];
-        img1.className = 'gallery-img';
-        row.appendChild(img1);
-        
-        // Second image (if exists)
-        if (images[i + 1]) {
-            const img2 = document.createElement('img');
-            img2.src = images[i + 1];
-            img2.className = 'gallery-img';
-            row.appendChild(img2);
-        }
+        const img = document.createElement('img');
+        img.src = images[i];
+        img.className = 'gallery-img';
+        row.appendChild(img);
         
         container.appendChild(row);
     }
