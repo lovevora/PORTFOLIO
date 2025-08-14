@@ -75,7 +75,7 @@ body {
 }
 
 .main-nav a:hover {
-  color: #aaedf1;
+  color: #99c1c4;
 }
 
 .gallery-row {
@@ -103,6 +103,6 @@ body {
 }
 
 .container p a[style]:hover {
-  color: #aaedf1 !important;
+  color: #99c1c4 !important;
   text-decoration: none !important;
 }
