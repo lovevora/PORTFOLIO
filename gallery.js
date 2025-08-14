@@ -7,7 +7,7 @@ const images = [
   'images/gallery/gdsfsgdfsgdfsgdfgfgdfdsfdggg.png',
   'images/gallery/gdsfsgdfsgdfsgdfgfgdggg.png',
   'images/gallery/gdsfsgdfsgdfsgdfggg.png',
-  'images/gallery/gfsdsfgdsgdfgsdfsdgfsdafdssdfsdffsdfdgf.png',
+  
   'images/gallery/idek_676765756765756765.png',
   'images/gallery/leijaNOCOMP.png',
   'images/gallery/marie_666.png',
