@@ -1,15 +1,20 @@
 /* Base styling */
 @import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital,wght@0,400;1,400&display=swap');
 
+html {
+  overflow-x: hidden; /* Kills horizontal scroll */
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #000000;
   font-family: 'Xanh Mono', monospace;
-  font-size: 2.2rem; /* bigger */
+  font-size: 2.2rem;
   color: #f5f5f5;
-  letter-spacing: 0.2em; /* adds space between letters */
-  line-height: 1.2; /* tighter line spacing for that cramped early web feel */
+  letter-spacing: 0.2em;
+  line-height: 1.2;
+  width: 100%; /* Contains layout */
 }
 
 /* Optional content wrapper */
@@ -21,12 +26,12 @@ body {
 }
 
 .banner {
-  width: 100vw; /* full viewport width */
+  width: 100%; /* Changed from 100vw to prevent overflow */
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  left: 0; /* Removed negative margins */
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .banner img {
@@ -39,8 +44,8 @@ body {
 
 /* Navigation */
 .main-nav {
-  background-color: #111; /* dark background */
-  text-align: center; /* center nav horizontally */
+  background-color: #111;
+  text-align: center;
 }
 
 .main-nav ul {
@@ -48,7 +53,7 @@ body {
   margin: 0;
   padding: 0;
   display: inline-flex;
-  gap: 20.5rem; /* space between buttons */
+  gap: 20.5rem;
 }
 
 .main-nav li {
@@ -62,7 +67,7 @@ body {
   padding: 1.5rem 1rem;
   display: inline-block;
   transition: color 0.3s;
-  letter-spacing: 0.6em; /* more spaced out than body text */
+  letter-spacing: 0.6em;
 }
 
 .main-nav a:visited {
@@ -85,10 +90,10 @@ body {
     height: auto;
     display: block;
 }
-.container p:first-child {
-    margin-top: 6rem; /* Adds space above "gallery" */
-}
 
+.container p:first-child {
+    margin-top: 6rem;
+}
 
 /* FORCED HOVER EFFECT (overrides everything) */
 .container p a[style] {
