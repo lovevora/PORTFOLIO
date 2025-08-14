@@ -1,15 +1,15 @@
 /* Base styling */
-
 @import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital,wght@0,400;1,400&display=swap');
 
 body {
   margin: 0;
   padding: 0;
-  background-color: #0a0a0a; /* very dark gray, almost black */
+  background-color: #0a0a0a;
   font-family: 'Xanh Mono', monospace;
-  font-size: 1.5rem; /* ~24px */
-  color: #f5f5f5; /* subtle off-white, not pure white */
-  text-transform: uppercase; /* ALL CAPS */
+  font-size: 1.8rem; /* bigger */
+  color: #f5f5f5;
+  letter-spacing: 0.1em; /* adds space between letters */
+  line-height: 1.2; /* tighter line spacing for that cramped early web feel */
 }
 
 /* Optional content wrapper */
@@ -47,31 +47,28 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: inline-flex; /* horizontal layout */
-  gap: 2rem; /* space between links */
+  display: inline-flex;
+  gap: 20.5rem; /* space between buttons */
 }
 
 .main-nav li {
-  display: inline; /* inline elements for spacing */
+  display: inline;
 }
 
 .main-nav a {
-  color: white; /* always white */
+  color: white;
   text-decoration: none;
-  font-size: 1.2rem;
-  padding: 1rem 0;
+  font-size: 2.5rem;
+  padding: 1.5rem 1rem;
   display: inline-block;
   transition: color 0.3s;
+  letter-spacing: 0.7em; /* more spaced out than body text */
 }
 
 .main-nav a:visited {
-  color: white; /* prevent purple visited color */
+  color: white;
 }
 
 .main-nav a:hover {
-  color: #aaa; /* hover gray */
-}
-body {
-  font-size: 1.8rem; /* bigger */
-  line-height: 1.2; /* tighter line spacing for that cramped early web feel */
+  color: #aaedf1;
 }
