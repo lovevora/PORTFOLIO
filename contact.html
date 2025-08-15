@@ -28,23 +28,40 @@
     <p>contact</p>
     <p> -</p>
     
-    <p>no forms. no newsletters.</p>
-    <p>just direct communication.</p>
-    
+    <p>
+  <a href="#" onclick="copyEmail(event)" style="color: #f5f5f5; text-decoration: none; cursor: pointer;">
+    click to copy email
+  </a>
+</p>
+
+<script>
+  function copyEmail(e) {
+    e.preventDefault();
+    const email = 'uralanvisa@gmail.com';
+    navigator.clipboard.writeText(email).then(() => {
+      // Optional: Show a brief "Copied!" feedback
+      const originalText = e.target.innerText;
+      e.target.innerText = 'Copied!';
+      setTimeout(() => { e.target.innerText = originalText; }, 1000);
+    }).catch(err => {
+      console.error('Failed to copy: ', err);
+      // Fallback for older browsers
+      window.location.href = `mailto:${email}`;
+    });
+  }
+</script>
     <p> -</p>
     
-    <p>email:</p>
-    <p><a href="mailto:yourname@example.com" style="color: #f5f5f5; text-decoration: none;">yourname@example.com</a></p>
-    
+    <p><a href="https://instagram.com/rnx._31" style="color: #f5f5f5; text-decoration: none;" target="_blank">instagram: rnx._31</a></p>
     <p> -</p>
     
-    <p>instagram:</p>
-    <p><a href="https://instagram.com/yourhandle" style="color: #f5f5f5; text-decoration: none;" target="_blank">@yourhandle</a></p>
-    
+    <p>discord: dissogod</p>
     <p> -</p>
     
-    <p>pgp key available</p>
-    <p>on request.</p>
+    <p>telegram: rrvvxxnn</p>
+    <p> -</p>
+    
+    <p>pgp key on request</p>
   </div>
 
 </body>
