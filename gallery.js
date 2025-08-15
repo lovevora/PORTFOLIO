@@ -1,18 +1,17 @@
 const images = [
   'images/gallery/FETUSSSSSSS66666SJHJHJS40994898989089064.png',
-  'images/gallery/FETUSSSSSSS66666SJHJHJS409948989890890648790998776787.png',
+  
   
   'images/gallery/CRINGE_02.png',
   'images/gallery/fucky_coloros_SAVU0.png',
-  'images/gallery/gdsfsgdfsgdfsgdfgfgdfdsfdggg.png',
-  'images/gallery/gdsfsgdfsgdfsgdfgfgdggg.png',
-  'images/gallery/gdsfsgdfsgdfsgdfggg.png',
+  
+  
   
   'images/gallery/idek_676765756765756765.png',
-  'images/gallery/leijaNOCOMP.png',
+  
   'images/gallery/marie_666.png',
   'images/gallery/sdg9uidsf9g8sdfudgf.png',
-  'images/gallery/dsfadfasffffffffffffffffffasdf.png',
+  
 ];
 
 function loadGallery() {
