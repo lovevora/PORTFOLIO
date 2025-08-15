@@ -188,5 +188,57 @@ body {
 .container {
   padding-bottom: 200px; /* Adjust this value as needed */
   /* OR */
-  margin-bottom: 200px; /* If you prefer margin */
+  margin-bottom: 20px; /* If you prefer margin */
+}
+
+
+/* --------------------------------
+   BRAMBLEFORT PROJECT STYLING
+   -------------------------------- */
+
+/* Project logo styling */
+.project-logo {
+    max-width: 80%;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
+}
+
+/* Screenshot/gallery image styling */
+.project-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 3rem auto;
+    display: block;
+    transition: opacity 0.3s;
+}
+
+.project-image:hover {
+    opacity: 0.9;
+}
+
+/* Vertical spacing between images */
+.project-gallery img:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+/* Steam widget styling */
+.steam-widget {
+    margin: 3rem auto;
+    border: 1px solid #222;
+}
+
+/* Add this to your style.css */
+.gallery-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 0rem auto; /* 8rem gap below each image */
+    object-fit: contain;
+}
+
+/* For the last image, remove bottom margin */
+.gallery-img:last-child {
+    margin-bottom: 0;
 }
