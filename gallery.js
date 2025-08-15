@@ -11,7 +11,7 @@ const images = [
   
   'images/gallery/marie_666.png',
   'images/gallery/sdg9uidsf9g8sdfudgf.png',
-  
+  'images/gallery/hxlx.png',
 ];
 
 function loadGallery() {
