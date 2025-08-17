@@ -205,3 +205,19 @@ body {
 .gallery-img:last-child {
     margin-bottom: 0;
 }
+
+/* PROJECTS PAGE BACKGROUND ONLY */
+body.projects-page {
+  background: #000000 url('projects_bg.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+body.projects-page .container,
+body.projects-page .main-nav,
+body.projects-page .banner {
+  position: relative;
+  z-index: 1;
+}
