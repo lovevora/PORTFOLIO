@@ -117,9 +117,6 @@ body {
 }
 
 .gallery-header img {
-  
-
-  
   width: 80%;
   height: auto;
   display: block;
@@ -145,15 +142,11 @@ body {
     color: #99c1c4;
 }
 
-
-
-
 .container {
   padding-bottom: 20px; /* Adjust this value as needed */
   /* OR */
   margin-bottom: 20px; /* If you prefer margin */
 }
-
 
 /* --------------------------------
    BRAMBLEFORT PROJECT STYLING
@@ -213,8 +206,6 @@ body {
   position: relative;
 }
 
-
-
 body.projects-page .container,
 body.projects-page .main-nav,
 body.projects-page .banner {
@@ -231,4 +222,69 @@ a {
 
 a:hover {
   color: #99c1c4;
+}
+
+/* ####################################### */
+/* MOBILE RESPONSIVE FIXES (THE SOLUTION) */
+/* ####################################### */
+
+@media (max-width: 1200px) {
+  /* First breakpoint for large tablets/small laptops */
+  .main-nav ul {
+    gap: 5rem; /* Drastically reduce the gap on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Main breakpoint for tablets and phones */
+
+  /* 1. FIX THE NAVIGATION */
+  .main-nav ul {
+    display: flex;          /* Change from inline-flex to flex */
+    flex-direction: column; /* Stack items vertically */
+    gap: 0;                 /* Remove the huge gap */
+    width: 100%;
+  }
+
+  .main-nav a {
+    font-size: 1.2rem;      /* Slightly smaller font */
+    padding: 1rem;          /* Reduce padding */
+    letter-spacing: 0.3em;  /* Drastically reduce letter spacing */
+    display: block;         /* Make the whole area clickable */
+    width: 100%;
+    box-sizing: border-box; /* Padding included in width */
+  }
+
+  /* 2. OPTIONAL: Adjust other elements for mobile */
+  body {
+    font-size: 1.1rem; /* Slightly smaller base font size */
+    letter-spacing: 0.1em;
+    line-height: 1.5;
+  }
+
+  .container {
+    padding: 1rem; /* Reduce padding on mobile */
+  }
+
+  .gallery-container {
+    margin-top: 5rem; /* Reduce large top margin on mobile */
+  }
+
+  .gallery-row {
+    margin-bottom: 5rem; /* Reduce massive spacing between rows */
+    padding-bottom: 5rem;
+  }
+
+  .gallery-header img {
+    width: 95%; /* Use more of the screen width on mobile */
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Optional: Extra adjustments for very small phones */
+  .main-nav a {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
 }
