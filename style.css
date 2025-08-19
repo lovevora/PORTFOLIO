@@ -228,14 +228,14 @@ a:hover {
 /* MOBILE RESPONSIVE FIXES (THE SOLUTION) */
 /* ####################################### */
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   /* First breakpoint for large tablets/small laptops */
   .main-nav ul {
     gap: 5rem; /* Drastically reduce the gap on medium screens */
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   /* Main breakpoint for tablets and phones */
 
   /* 1. FIX THE NAVIGATION */
@@ -281,7 +281,7 @@ a:hover {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1100px) {
   /* Optional: Extra adjustments for very small phones */
   .main-nav a {
     font-size: 1rem;
