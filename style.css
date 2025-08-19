@@ -281,10 +281,18 @@ a:hover {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   /* Optional: Extra adjustments for very small phones */
   .main-nav a {
     font-size: 1rem;
     padding: 0.8rem;
   }
 }
+
+/* 2. FIX THE ITCH.IO EMBED */
+  /* Targets the container div that the embed is in */
+  .container iframe {
+    width: 100% !important; /* Force full width */
+    max-width: 100% !important; /* Prevent overflow */
+    height: 170px; /* Lock the height to a good size for mobile */
+  }
