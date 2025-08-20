@@ -296,3 +296,14 @@ a:hover {
     max-width: 100% !important; /* Prevent overflow */
     height: 170px; /* Lock the height to a good size for mobile */
   }
+
+
+/* Fix for YouTube Embed */
+.container .youtube-video {
+  width: 100% !important; /* The !important ensures it overrides the other rule */
+  aspect-ratio: 16 / 9 !important;
+  max-width: 900px;
+  display: block;
+  margin: 0 auto;
+  height: auto !important; /* This is the key to overriding the 170px */
+}
