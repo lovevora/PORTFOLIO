@@ -292,18 +292,18 @@ a:hover {
 /* 2. FIX THE ITCH.IO EMBED */
   /* Targets the container div that the embed is in */
   .container iframe {
-    width: 100% !important; /* Force full width */
-    max-width: 100% !important; /* Prevent overflow */
-    height: 170px; /* Lock the height to a good size for mobile */
+    width: 100% !important; 
+    max-width: 100% !important; 
+    height: 170px; 
   }
 
 
-/* Fix for YouTube Embed */
+/* YouTube Embed */
 .container .youtube-video {
-  width: 100% !important; /* The !important ensures it overrides the other rule */
+  width: 100% !important; 
   aspect-ratio: 16 / 9 !important;
   max-width: 900px;
   display: block;
   margin: 0 auto;
-  height: auto !important; /* This is the key to overriding the 170px */
+  height: auto !important; 
 }
