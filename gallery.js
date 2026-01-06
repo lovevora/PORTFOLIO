@@ -11,11 +11,9 @@ const images = [
   
   'images/gallery/marie_666.png',
   'images/gallery/sdg9uidsf9g8sdfudgf.png',
-  'images/gallery/dsasadsadsdasdadasdadsdssds_transpaas.png',
+  
   'images/gallery/mael_05_out_01dsasasads.png',
-  'images/gallery/Screenshotdsasds 2025-11-06 16fgfgfg3343.png',
-  'images/gallery/dsfadfasffffffffffffffffffasdf.png',
-  'images/gallery/monk_06.png',
+  
 
   
   
